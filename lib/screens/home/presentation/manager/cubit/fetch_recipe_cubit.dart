@@ -4,22 +4,22 @@ import 'package:meta/meta.dart';
 import 'package:recipe_app/screens/home/data/models/recipe_model/recipe.dart';
 import 'package:recipe_app/screens/home/data/repo/recipe_repo.dart';
 
-part 'fetch_popular_recipe_state.dart';
+part 'fetch_recipe_state.dart';
 
-class FetchPopularRecipeCubit extends Cubit<FetchPopularRecipeState> {
-  FetchPopularRecipeCubit(this.recipeRepo) : super(FetchPopularRecipeInitial());
+class FetchRecipeCubit extends Cubit<FetchRecipeState> {
+  FetchRecipeCubit(this.recipeRepo) : super(FetchRecipeInitial());
   final RecipeRepo recipeRepo;
 
   Future<void> fetchPopularRecipe() async {
-    emit(FetchPopularRecipeLoading());
-    var result = await recipeRepo.fetchPopularRecipe();
+    emit(FetchRecipeLoading());
+    var result = await recipeRepo.fetchRecipe();
     result.fold(
       (failure) {
         log("Failed to fetch: $failure");
-        emit(FetchPopularRecipeFailure(errorMessage: failure));
+        emit(FetchRecipeFailure(errorMessage: failure));
       },
       (recipe) {
-        emit(FetchPopularRecipeSuccess(recipes: recipe));
+        emit(FetchRecipeSuccess(recipes: recipe));
       },
     );
   }

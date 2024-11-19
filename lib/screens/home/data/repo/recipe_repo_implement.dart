@@ -9,7 +9,7 @@ class RecipeRepoImplement implements RecipeRepo {
   RecipeRepoImplement(this.apiService);
 
   @override
-  Future<Either<String, List<Recipe>>> fetchPopularRecipe() async {
+  Future<Either<String, List<Recipe>>> fetchRecipe() async {
     try {
       var data = await apiService.get();
       List<Recipe> result = [];

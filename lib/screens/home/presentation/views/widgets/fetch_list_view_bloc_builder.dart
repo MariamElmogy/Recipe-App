@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:recipe_app/screens/home/presentation/manager/cubit/fetch_popular_recipe_cubit.dart';
+import 'package:recipe_app/screens/home/presentation/manager/cubit/fetch_recipe_cubit.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/popular_listview.dart';
 
 class FetchPopularListViewBlocBuilder extends StatelessWidget {
@@ -9,14 +9,14 @@ class FetchPopularListViewBlocBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FetchPopularRecipeCubit, FetchPopularRecipeState>(
+    return BlocBuilder<FetchRecipeCubit, FetchRecipeState>(
       builder: (context, state) {
-        if (state is FetchPopularRecipeSuccess) {
+        if (state is FetchRecipeSuccess) {
           final filteredRecipes = state.recipes
               .where((recipe) => recipe.mealType!.contains(category))
               .toList();
           return PopularListView(recipes: filteredRecipes);
-        } else if (state is FetchPopularRecipeFailure) {
+        } else if (state is FetchRecipeFailure) {
           return Text(state.errorMessage);
         }
         return const Center(child: CircularProgressIndicator());

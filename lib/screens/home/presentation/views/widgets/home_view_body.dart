@@ -5,7 +5,7 @@ import 'package:recipe_app/screens/home/presentation/views/widgets/category_tab_
 import 'package:recipe_app/screens/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/custom_title.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/feature_item.dart';
-import 'package:recipe_app/screens/home/presentation/views/widgets/fetch_popular_list_view_bloc_builder.dart';
+import 'package:recipe_app/screens/home/presentation/views/widgets/fetch_list_view_bloc_builder.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
