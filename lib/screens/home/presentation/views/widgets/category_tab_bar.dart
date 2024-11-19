@@ -3,7 +3,8 @@ import 'package:recipe_app/core/utils/size_config.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/tab_item.dart';
 
 class CategoryTabBar extends StatelessWidget {
-  const CategoryTabBar({super.key});
+  const CategoryTabBar({super.key, required this.onCategorySelected});
+  final Function(String) onCategorySelected;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,10 @@ class CategoryTabBar extends StatelessWidget {
                 color: const Color(0XFF70B9BE),
                 borderRadius: BorderRadius.circular(20),
               ),
+              onTap: (index) {
+                const categories = ['Breakfast', 'Lunch', 'Dinner', 'Snacks'];
+                onCategorySelected(categories[index]);
+              },
               labelPadding:
                   EdgeInsets.symmetric(horizontal: SizeConfig.width * .012),
               tabs: const [

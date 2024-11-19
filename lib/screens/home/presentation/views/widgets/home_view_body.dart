@@ -5,11 +5,17 @@ import 'package:recipe_app/screens/home/presentation/views/widgets/category_tab_
 import 'package:recipe_app/screens/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/custom_title.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/feature_item.dart';
-import 'package:recipe_app/screens/home/presentation/views/widgets/popular_listview.dart';
+import 'package:recipe_app/screens/home/presentation/views/widgets/fetch_popular_list_view_bloc_builder.dart';
 
-class HomeViewBody extends StatelessWidget {
+class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
 
+  @override
+  State<HomeViewBody> createState() => _HomeViewBodyState();
+}
+
+class _HomeViewBodyState extends State<HomeViewBody> {
+  String selectedCategory = "Breakfast";
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -47,14 +53,20 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ),
-        const SliverToBoxAdapter(
-          child: CategoryTabBar(),
+        SliverToBoxAdapter(
+          child: CategoryTabBar(
+            onCategorySelected: (category) {
+              setState(() {
+                selectedCategory = category;
+              });
+            },
+          ),
         ),
         SliverToBoxAdapter(
           child: SizedBox(height: SizeConfig.height * .02),
         ),
-        const SliverToBoxAdapter(
-          child: PopularListView(),
+        SliverToBoxAdapter(
+          child: FetchPopularListViewBlocBuilder(category: selectedCategory),
         ),
       ],
     );

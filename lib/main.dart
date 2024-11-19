@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/core/utils/service_locator.dart';
 import 'package:recipe_app/screens/onboarding/presentation/views/onboarding_view.dart';
 
 void main() {
+  // This is the main entry point of your application.
+  setUpServiceLocator();
   runApp(const MyApp());
 }
 
