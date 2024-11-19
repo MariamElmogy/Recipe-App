@@ -8,6 +8,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
+        maintainBottomViewPadding: true,
+        minimum: EdgeInsets.all(8),
         child: HomeViewBody(),
       ),
     );

@@ -4,7 +4,7 @@ import 'package:recipe_app/core/custom/custom_elevated_button.dart';
 import 'package:recipe_app/core/utils/app_font_styles.dart';
 import 'package:recipe_app/core/utils/images_data.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
-import 'package:recipe_app/screens/home/presentation/views/home_view.dart';
+import 'package:recipe_app/screens/home/presentation/views/navigation_view.dart';
 
 class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody({
@@ -61,7 +61,7 @@ class OnboardingViewBody extends StatelessWidget {
                     onPressed: () => Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomeView(),
+                        builder: (context) => const NavigationView(),
                       ),
                       (route) => false,
                     ),
