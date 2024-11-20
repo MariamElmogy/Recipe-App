@@ -10,35 +10,30 @@ class CategoryTabBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            color: const Color(0XFFF1F5F5),
-            height: SizeConfig.height * .05,
-            child: TabBar(
-              unselectedLabelColor: const Color(0XFF0A2533),
-              labelColor: Colors.white,
-              dividerColor: Colors.transparent,
-              indicator: BoxDecoration(
-                color: const Color(0XFF70B9BE),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              onTap: (index) {
-                const categories = ['Breakfast', 'Lunch', 'Dinner', 'Snacks'];
-                onCategorySelected(categories[index]);
-              },
-              labelPadding:
-                  EdgeInsets.symmetric(horizontal: SizeConfig.width * .012),
-              tabs: const [
-                TabItem(title: "Breakfast"),
-                TabItem(title: "Lunch"),
-                TabItem(title: "Dinner"),
-                TabItem(title: "Snacks"),
-              ],
-            ),
+      child: Container(
+        color: const Color(0XFFF1F5F5),
+        height: SizeConfig.height * .05,
+        child: TabBar(
+          unselectedLabelColor: const Color(0XFF0A2533),
+          labelColor: Colors.white,
+          dividerColor: Colors.transparent,
+          indicator: BoxDecoration(
+            color: const Color(0XFF70B9BE),
+            borderRadius: BorderRadius.circular(20),
           ),
-        ],
+          onTap: (index) {
+            const categories = ['Breakfast', 'Lunch', 'Dinner', 'Snacks'];
+            onCategorySelected(categories[index]);
+          },
+          labelPadding:
+              EdgeInsets.symmetric(horizontal: SizeConfig.width * .012),
+          tabs: const [
+            TabItem(title: "Breakfast"),
+            TabItem(title: "Lunch"),
+            TabItem(title: "Dinner"),
+            TabItem(title: "Snacks"),
+          ],
+        ),
       ),
     );
   }

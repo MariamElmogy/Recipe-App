@@ -23,6 +23,16 @@ class AppFontStyles {
         fontSize: getResponsiveFontSize(context, fontSize: 18),
         fontWeight: FontWeight.bold,
       );
+  static TextStyle styleBold24(context) => TextStyle(
+        color: const Color(0XFF0A2533),
+        fontSize: getResponsiveFontSize(context, fontSize: 24),
+        fontWeight: FontWeight.bold,
+      );
+  static TextStyle styleMedium16(context) => TextStyle(
+        color: const Color(0XFF0A2533),
+        fontSize: getResponsiveFontSize(context, fontSize: 20),
+        fontWeight: FontWeight.w500,
+      );
   static TextStyle styleSemiBold26(context) => TextStyle(
         color: const Color(0XFF000000),
         fontSize: getResponsiveFontSize(context, fontSize: 26),
