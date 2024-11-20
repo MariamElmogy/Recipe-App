@@ -12,21 +12,38 @@ class RecipeIngredients extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: SizeConfig.height / 1.2,
-      child: ListView.builder(
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        itemCount: recipe.ingredients!.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 16, left: 8),
-            child: Text(
-              "${index + 1}. ${recipe.ingredients![index]}",
-              style: AppFontStyles.styleRegular20(context)
-                  .copyWith(color: AppColors.titleColor),
+      height: SizeConfig.height,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Ingredients",
+            style: AppFontStyles.styleBold20(context),
+          ),
+          SizedBox(height: SizeConfig.height * .01),
+          Text(
+            "${recipe.ingredients!.length} Item",
+            style: AppFontStyles.styleBold16(context).copyWith(
+              color: const Color(0XFF748189),
             ),
-          );
-        },
+          ),
+          SizedBox(height: SizeConfig.height * .02),
+          ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: recipe.ingredients!.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 16, left: 8),
+                child: Text(
+                  "${index + 1}. ${recipe.ingredients![index]}",
+                  style: AppFontStyles.styleRegular20(context)
+                      .copyWith(color: AppColors.titleColor),
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
