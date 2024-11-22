@@ -10,9 +10,9 @@ class FetchRecipeCubit extends Cubit<FetchRecipeState> {
   FetchRecipeCubit(this.recipeRepo) : super(FetchRecipeInitial());
   final RecipeRepo recipeRepo;
 
-  Future<void> fetchPopularRecipe() async {
+  Future<void> fetchRecipe({required String meal}) async {
     emit(FetchRecipeLoading());
-    var result = await recipeRepo.fetchRecipe();
+    var result = await recipeRepo.fetchRecipe(meal: meal);
     result.fold(
       (failure) {
         log("Failed to fetch: $failure");

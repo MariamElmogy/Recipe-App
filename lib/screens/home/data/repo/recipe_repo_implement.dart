@@ -9,9 +9,9 @@ class RecipeRepoImplement implements RecipeRepo {
   RecipeRepoImplement(this.apiService);
 
   @override
-  Future<Either<String, List<Recipe>>> fetchRecipe() async {
+  Future<Either<String, List<Recipe>>> fetchRecipe({required String meal}) async {
     try {
-      var data = await apiService.get();
+      var data = await apiService.get(endpoint: "/meal-type/$meal");
       List<Recipe> result = [];
       for (var item in data['recipes']) {
         result.add(Recipe.fromJson(item));

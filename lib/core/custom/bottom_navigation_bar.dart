@@ -22,32 +22,40 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Container(
       color: Colors.grey[100],
       padding: EdgeInsets.symmetric(
-        horizontal: SizeConfig.width * .015,
+        horizontal: SizeConfig.width * .05,
         vertical: SizeConfig.height * .01,
       ),
       child: GNav(
         gap: 10,
         tabBorderRadius: 100,
-        backgroundColor: Colors.grey[100]!,
+        backgroundColor: Colors.transparent,
         activeColor: Colors.white,
-        color: Colors.blue[600],
-        tabBackgroundGradient: LinearGradient(colors: [
-          Colors.blue[400]!,
-          Colors.blueAccent.shade700,
-        ], begin: Alignment.topLeft, end: Alignment.topRight),
-        iconSize: 30,
-        textSize: 18,
+        color: const Color(0XFF97A2B0),
+        tabBackgroundColor: const Color(0XFF70B9BE),
         padding: EdgeInsets.symmetric(
-            horizontal: SizeConfig.width * .01,
-            vertical: SizeConfig.height * .01),
+          horizontal: SizeConfig.width * .01,
+          vertical: SizeConfig.height * .01,
+        ),
         tabs: const [
           GButton(
-            icon: Icons.home,
+            icon: Icons.house_rounded,
             text: "Home",
+            iconSize: 20,
           ),
           GButton(
-            icon: Icons.person,
+            icon: Icons.search_rounded,
+            text: "Search",
+            iconSize: 20,
+          ),
+          GButton(
+            icon: Icons.soup_kitchen_outlined,
+            text: "Ask ChatGPT",
+            iconSize: 20,
+          ),
+          GButton(
+            icon: Icons.person_outline_rounded,
             text: "Person",
+            iconSize: 20,
           ),
         ],
         onTabChange: widget.onTap,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/core/custom/image_container.dart';
 import 'package:recipe_app/core/utils/app_colors.dart';
 import 'package:recipe_app/core/utils/app_font_styles.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
@@ -45,19 +46,7 @@ class PopularItem extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    width: SizeConfig.width,
-                    height: SizeConfig.height * .14,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      image: recipe.image != null
-                          ? DecorationImage(
-                              image: NetworkImage(recipe.image!),
-                              fit: BoxFit.cover,
-                            )
-                          : null,
-                    ),
-                  ),
+                  ImageContainer(image: recipe.image),
                   SizedBox(height: SizeConfig.height * .012),
                   Text(
                     recipe.name!,

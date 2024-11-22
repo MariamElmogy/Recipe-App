@@ -23,7 +23,7 @@ class RecipeInstructions extends StatelessWidget {
           SizedBox(height: SizeConfig.height * .01),
           Text(
             "${recipe.instructions!.length} Item",
-            style: AppFontStyles.styleBold16(context).copyWith(
+            style: AppFontStyles.styleRegular16(context).copyWith(
               color: const Color(0XFF748189),
             ),
           ),

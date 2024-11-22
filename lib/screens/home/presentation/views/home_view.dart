@@ -11,8 +11,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => FetchRecipeCubit(getIt.get<RecipeRepoImplement>())
-        ..fetchPopularRecipe(),
+      create: (context) =>
+          FetchRecipeCubit(getIt.get<RecipeRepoImplement>()),
       child: const Scaffold(
         body: SafeArea(
           maintainBottomViewPadding: true,
