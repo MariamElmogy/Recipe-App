@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/core/custom/image_container.dart';
+import 'package:recipe_app/core/custom/my_favorite_container.dart';
 import 'package:recipe_app/core/utils/app_colors.dart';
 import 'package:recipe_app/core/utils/app_font_styles.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
@@ -88,22 +89,10 @@ class PopularItem extends StatelessWidget {
                   ],
                 ),
               ),
-              Positioned(
+              const Positioned(
                 top: 10,
                 right: 10,
-                child: Container(
-                  width: SizeConfig.width * .07,
-                  height: SizeConfig.height * .04,
-                  decoration: BoxDecoration(
-                    color: const Color(0XFFFFFFFF).withOpacity(.8),
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: const Icon(
-                    Icons.favorite_outline,
-                    color: Colors.black,
-                    size: 16,
-                  ),
-                ),
+                child: MyFavoriteContainer(),
               ),
             ],
           ),

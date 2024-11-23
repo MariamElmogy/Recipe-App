@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/core/custom/bottom_navigation_bar.dart';
+import 'package:recipe_app/screens/account/presentation/views/account_view.dart';
 import 'package:recipe_app/screens/home/presentation/views/home_view.dart';
 import 'package:recipe_app/screens/search/presentation/views/search_view.dart';
 
@@ -51,12 +52,7 @@ class _NavigationViewState extends State<NavigationView> {
         children: const [
           HomeView(),
           SearchView(),
-          Center(
-            child: Text("Page 2"),
-          ),
-          Center(
-            child: Text("Page 3"),
-          ),
+          AccountView(),
         ],
       ),
     );

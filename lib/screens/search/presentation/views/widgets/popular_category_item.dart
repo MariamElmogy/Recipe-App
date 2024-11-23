@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/core/custom/image_container.dart';
+import 'package:recipe_app/core/custom/recipe_rate_widget.dart';
 import 'package:recipe_app/core/utils/app_colors.dart';
 import 'package:recipe_app/core/utils/app_font_styles.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
@@ -63,22 +64,7 @@ class PopularCategoryItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     SizedBox(height: SizeConfig.height * .01),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                          size: 16,
-                        ),
-                        SizedBox(width: SizeConfig.width * .01),
-                        Text(
-                          "${recipe.rating}/5.0",
-                          style: AppFontStyles.styleRegular16(context).copyWith(
-                            color: const Color(0XFF97A2B0),
-                          ),
-                        ),
-                      ],
-                    ),
+                    RecipeRateWidget(recipe: recipe),
                   ],
                 ),
               ),

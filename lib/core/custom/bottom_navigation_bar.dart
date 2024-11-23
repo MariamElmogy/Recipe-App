@@ -48,11 +48,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
             iconSize: 20,
           ),
           GButton(
-            icon: Icons.soup_kitchen_outlined,
-            text: "Ask ChatGPT",
-            iconSize: 20,
-          ),
-          GButton(
             icon: Icons.person_outline_rounded,
             text: "Person",
             iconSize: 20,
