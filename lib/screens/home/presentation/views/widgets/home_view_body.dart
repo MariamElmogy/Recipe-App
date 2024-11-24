@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipe_app/core/utils/app_font_styles.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
-import 'package:recipe_app/screens/home/presentation/manager/cubit/fetch_recipe_cubit.dart';
+import 'package:recipe_app/screens/home/presentation/manager/fetch_recipe_cubit/fetch_recipe_cubit.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/category_tab_bar.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/custom_title.dart';

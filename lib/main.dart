@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/core/utils/service_locator.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
+import 'package:recipe_app/screens/home/data/models/recipe_model/recipe_database.dart';
 import 'package:recipe_app/screens/onboarding/presentation/views/onboarding_view.dart';
 
-void main() {
-  // This is the main entry point of your application.
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // using getIt for dependency injection
   setUpServiceLocator();
+  // initialize recipes database
+  await RecipeDatabase.initialize();
   runApp(const MyApp());
 }
 

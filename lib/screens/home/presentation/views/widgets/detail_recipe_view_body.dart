@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/core/custom/my_favorite_container.dart';
 import 'package:recipe_app/core/custom/my_icon_button.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
 import 'package:recipe_app/screens/home/data/models/recipe_model/recipe.dart';
@@ -30,7 +31,7 @@ class DetailRecipeViewBody extends StatelessWidget {
         Positioned(
           top: 40,
           left: 20,
-          right: 20,
+          right: 30,
           child: Row(
             children: [
               MyIconButton(
@@ -40,10 +41,7 @@ class DetailRecipeViewBody extends StatelessWidget {
                 },
               ),
               const Spacer(),
-              MyIconButton(
-                icon: Icons.notification_add,
-                pressed: () {},
-              ),
+              MyFavoriteContainer(recipe: recipe),
             ],
           ),
         ),

@@ -89,10 +89,10 @@ class PopularItem extends StatelessWidget {
                   ],
                 ),
               ),
-              const Positioned(
+              Positioned(
                 top: 10,
                 right: 10,
-                child: MyFavoriteContainer(),
+                child: MyFavoriteContainer(recipe: recipe),
               ),
             ],
           ),
