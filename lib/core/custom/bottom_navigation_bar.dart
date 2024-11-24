@@ -48,8 +48,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
             iconSize: 20,
           ),
           GButton(
-            icon: Icons.person_outline_rounded,
-            text: "Person",
+            icon: Icons.favorite_border,
+            text: "Favorites",
             iconSize: 20,
           ),
         ],

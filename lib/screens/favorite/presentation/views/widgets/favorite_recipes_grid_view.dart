@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/screens/account/presentation/views/widgets/favorite_recipe_item.dart';
+import 'package:recipe_app/screens/favorite/presentation/views/widgets/favorite_recipe_item.dart';
 import 'package:recipe_app/screens/home/data/models/recipe_model/recipe.dart';
 
 class FavoriteRecipesGridView extends StatelessWidget {

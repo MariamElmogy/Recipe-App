@@ -5,7 +5,7 @@ import 'package:recipe_app/core/custom/my_favorite_container.dart';
 import 'package:recipe_app/core/utils/app_colors.dart';
 import 'package:recipe_app/core/utils/app_font_styles.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
-import 'package:recipe_app/screens/account/presentation/manager/cubit/fetch_favorite_recipe_cubit.dart';
+import 'package:recipe_app/screens/favorite/presentation/manager/cubit/fetch_favorite_recipe_cubit.dart';
 import 'package:recipe_app/screens/home/data/models/recipe_model/recipe.dart';
 import 'package:recipe_app/screens/home/presentation/manager/toggle_favorite_recipe_cubit/toggle_favorite_recipe_cubit.dart';
 

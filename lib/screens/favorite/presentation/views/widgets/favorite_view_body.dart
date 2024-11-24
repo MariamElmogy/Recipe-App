@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipe_app/core/custom/recipe_loading_widget.dart';
 import 'package:recipe_app/core/utils/size_config.dart';
-import 'package:recipe_app/screens/account/presentation/manager/cubit/fetch_favorite_recipe_cubit.dart';
-import 'package:recipe_app/screens/account/presentation/views/widgets/favorite_recipes_grid_view.dart';
+import 'package:recipe_app/screens/favorite/presentation/manager/cubit/fetch_favorite_recipe_cubit.dart';
+import 'package:recipe_app/screens/favorite/presentation/views/widgets/favorite_recipes_grid_view.dart';
 import 'package:recipe_app/screens/home/presentation/views/widgets/custom_title.dart';
 
 class AccountViewBody extends StatefulWidget {
