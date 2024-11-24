@@ -17,7 +17,7 @@ class FavoriteRecipesGridView extends StatelessWidget {
         mainAxisSpacing: 12,
         childAspectRatio: 4 / 4.5,
       ),
-      physics: const NeverScrollableScrollPhysics(),
+      // physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return FavoriteRecipeItem(recipe: recipeList[index]);
       },

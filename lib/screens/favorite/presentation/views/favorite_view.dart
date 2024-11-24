@@ -27,15 +27,13 @@ class AccountView extends StatelessWidget {
       ],
       child: Scaffold(
         appBar: AppBar(
-          title: const CustomTitle(title: "Account"),
+          title: const CustomTitle(title: "My Favorite"),
           centerTitle: true,
         ),
         body: const SafeArea(
           maintainBottomViewPadding: true,
           minimum: EdgeInsets.all(16),
-          child: SingleChildScrollView(
-            child: AccountViewBody(),
-          ),
+          child: AccountViewBody(),
         ),
       ),
     );
